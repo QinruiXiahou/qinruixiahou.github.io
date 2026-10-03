@@ -107,3 +107,43 @@ h2 { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; line-heigh
   h1 { font-size: 24pt; } h2 { font-size: 16pt; } .paper h3 { font-size: 12pt; }
   .paper { break-inside: avoid; } h2, h3 { break-after: avoid; }
 }
+
+/* Academic profiles, paper details, funding, and the dedicated CV page. */
+.contact-links { flex-direction: row; align-items: center; gap: .6rem; }
+.contact-links a { display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 4px; }
+.contact-links a:hover { background: #eef4f4; }
+.contact-links svg { width: 25px; height: 25px; }
+.presentations { margin-top: .7rem; font-size: .9375rem; color: var(--muted); }
+.presentations summary { cursor: pointer; color: var(--accent); width: fit-content; padding-block: .25rem; }
+.presentations summary:hover { text-decoration: underline; text-underline-offset: .2em; }
+.presentations summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.presentations[open] { padding-bottom: .3rem; }
+.presentations h4 { margin: .8rem 0 .3rem; font-size: .9375rem; color: var(--ink); }
+.presentations ul { margin: 0; padding-left: 1.25rem; }
+.presentations li { padding-left: .15rem; margin-bottom: .3rem; }
+.citation { line-height: 1.8; }
+.citation a { text-decoration: none; }
+.citation a:hover { text-decoration: underline; }
+.funding-subheading { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 1rem; }
+.funding-list { list-style: none; margin: 0; padding: 0; }
+.funding-list li { margin-bottom: 1.1rem; }
+.funding-title, .funding-meta { display: block; }
+.funding-meta { color: var(--muted); font-size: .9375rem; margin-top: .15rem; }
+.cv-actions { display: flex; align-items: center; gap: 1.4rem; margin-bottom: 1.7rem; }
+.download-link { display: inline-block; padding: .55rem 1rem; border: 1px solid var(--accent); border-radius: 3px; text-decoration: none; }
+.download-link:hover { background: #eef4f4; text-decoration: none; }
+.cv-pages { display: grid; gap: 1.5rem; }
+.cv-pages a { display: block; }
+.cv-pages img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+@media (max-width: 680px) { .contact-links { gap: .6rem; } }
+@media print { .cv-actions { display: none; } .presentations > * { display: block !important; } }
+
+/* Compact homepage conference updates. */
+.home-cv-link { margin-top: 0; }
+.upcoming { margin-top: 1.7rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+.upcoming-heading { display: flex; align-items: baseline; gap: .8rem; margin-bottom: .5rem; }
+.upcoming h2 { font-size: 1.25rem; margin: 0; }
+.upcoming-heading > span { font-size: .875rem; color: var(--muted); }
+.upcoming ul { padding-left: 1.15rem; margin: 0; font-size: .9375rem; line-height: 1.6; }
+.upcoming li { margin: .2rem 0; padding-left: .1rem; }
+.upcoming li span { color: var(--muted); }
