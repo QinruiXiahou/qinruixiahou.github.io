@@ -4,6 +4,8 @@
   --muted: #5f6c70;
   --accent: #285d68;
   --accent-dark: #123e49;
+  --award-accent: #1f5263;
+  --reference-accent: var(--muted);
   --line: #dce3e4;
   --paper: #ffffff;
   --serif: Georgia, "Times New Roman", serif;
@@ -62,8 +64,10 @@ h2 { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; line-heigh
 .paper h3 a { text-decoration: none; }
 .paper h3 a:hover { text-decoration: underline; }
 .paper p { margin-bottom: .35rem; line-height: 1.65; }
-.authors, .paper-note { color: var(--muted); }
-.paper-status { color: var(--ink); }
+.authors { color: var(--muted); }
+.paper-status { color: #000; }
+.paper-status em { font-weight: 400; }
+.paper-note { color: var(--award-accent); }
 .paper-note, .paper-link { font-size: .9375rem; }
 .paper-link { display: inline-block; margin-top: .2rem; }
 .compact { margin-bottom: 1.5rem; }
@@ -157,3 +161,11 @@ h2 { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; line-heigh
 .section-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.4rem; row-gap: .45rem; }
 .research-end strong { color: var(--ink); font-style: normal; }
 @media (max-width: 370px) { .section-nav { grid-template-columns: 1fr; } }
+
+/* Official sources retain the surrounding typography; coverage stays secondary. */
+.funding-title a, .funding-title a:visited, .upcoming li > a, .upcoming li > a:visited { color: inherit; font: inherit; text-decoration: none; }
+.funding-title a:hover, .upcoming li > a:hover { text-decoration: underline; }
+.paper .coverage-links { margin: .3rem 0 .35rem; padding-left: 1.15rem; color: var(--reference-accent); font-size: .875rem; line-height: 1.65; }
+.coverage-links li + li { margin-top: .15rem; }
+.coverage-links a, .coverage-links a:visited { color: inherit; text-decoration: none; }
+.coverage-links a:hover { text-decoration: underline; }
