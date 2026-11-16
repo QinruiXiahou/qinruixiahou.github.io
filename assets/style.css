@@ -54,7 +54,7 @@ h2 { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; line-heigh
 .service { color: var(--muted); }
 .service .label { color: var(--ink); }
 .section-nav { display: flex; flex-wrap: wrap; column-gap: 1.4rem; row-gap: .45rem; padding-bottom: 1.4rem; margin-top: -.25rem; border-bottom: 1px solid var(--line); }
-.section-nav a { font-size: .9375rem; text-decoration: none; }
+.section-nav a { font-size: .9375rem; text-decoration: none; white-space: nowrap; }
 .section-nav a:hover { text-decoration: underline; }
 .research-section { padding-top: 2.2rem; }
 .research-section + .research-section { border-top: 1px solid var(--line); margin-top: 2.4rem; }
@@ -158,10 +158,7 @@ h2 { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; line-heigh
 .funding-content > .funding-subheading:first-child { margin-top: 0; }
 .site-header nav a { white-space: nowrap; }
 
-/* Balance the four research navigation links across two columns. */
-.section-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.4rem; row-gap: .45rem; }
 .research-end strong { color: var(--ink); font-style: normal; }
-@media (max-width: 370px) { .section-nav { grid-template-columns: 1fr; } }
 
 /* Official sources retain the surrounding typography; coverage stays secondary. */
 .funding-title a, .funding-title a:visited, .upcoming li > a, .upcoming li > a:visited { color: inherit; font: inherit; text-decoration: none; }
